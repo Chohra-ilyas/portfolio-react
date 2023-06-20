@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');
+:root{
+    --blue: #090a27;
+    --gold: gold;
+    --white: #fefefe;
+    --cyan: cyan;
+}
+*{
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    padding: 0;   
+}
+body{
+    background-color: var(--blue);
+    width: 100%;
+}
+nav{
+    display: flex;
+    height: 110px;
+    width: calc(100% - 50px);
+    padding: 0 25px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cyan);
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes logo{
+    0%{
+        letter-spacing: 0;
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 30px;
+    }
+    100%{
+        letter-spacing: 0;
+        margin-left: 0px;
+    }
+}
+#logo::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cyan);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .6s;
+}
+#logo:hover::after{
+    transform: scaleX(1);
+}
+nav > ul > li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    padding: 10px;
+    margin: 0 30px;
+    font-size: 20px;
+    color: var(--cyan);
+}
+nav > ul > li > a::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cyan);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .6s;
+}
+nav > ul > li > a:hover::after{
+    transform: scaleX(1);
+}
+#About-Me{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 825px;
+}
+.left{
+    width: 40%;
+}
+.left > p > h1{
+    font-size: 3.8rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--cyan);
+}
+.left > p > span{
+    color: var(--greenblue);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.left > p{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+.right{
+    width: 45%;
+    height: 100%;
+}
+.right > img{
+    width: 100%;
+    animation-name: devloper;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes devloper{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+#project{
+    height: 1050px;
+    background-color: rgb(59, 6, 80);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#project > h2{
+    font-size: 3rem;
+    color: rgb(236, 235, 235);
+    transition: .7s;
+}
+#project > h2:hover{
+    letter-spacing: 5px;
+}
+#project > .proj{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+#project > .proj > a > img{
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    width: 380px;
+    box-shadow: 5px 5px 10px rgba(11, 37, 37, 0.3);
+}
+#project > .proj > a {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    padding: 10px 12px;
+    height: 330px;
+    background-color: rgb(236, 235, 235);
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgba(11, 37, 37, 0.3);
+    transition: 0.7s;
+}
+#project > .proj > a:hover{
+    transform: scale(.93);
+}
+.lang > a > img{
+    transform: scale(.7);
+    padding: 20px;
+    background-color: rgb(236, 235, 235);
+    border-radius: 25px;
+    box-shadow: 5px 10px 20px rgba(22, 175, 175, 0.3),5px 10px 30px rgba(22, 175, 175, 0.3);
+    transition: 0.7s;
+}
+.lang > a > img:hover{
+    transform: scale(0.85);
+}
+footer{
+    display: flex;
+    height: 400px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(51, 7, 31);
+}
+footer > h2{
+    font-size: 3rem;
+    color: var(--white);
+    transition: .7s;
+}
+footer > h2:hover{
+    letter-spacing: 5px;
+}
+.contact{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact > div > a{
+    margin-top: 5px;
+    color: white;
+    font-size: 40px;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #fff;
+    margin: 20px;
+    align-self: center;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(12, 117, 121, 0.3);
+    transition: all .3s ease-out;
+}
+.icon > i{
+    margin-top: 20px;
+}
+.icon:hover{
+    width: 350px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
+.icon:hover i{
+    margin-top: 0;
+    margin-left: 40px;
+    color: #fff;
+}
+.icon .fa-facebook-f{
+   color: #1A6ED8; 
+}
+.fb:hover{
+    background-color: #1A6ED8;
+}
+.icon .fa-github{
+    color: #000; 
+}
+.git:hover{
+    background-color: #000;
+}
+.icon .fa-instagram{
+    color: rgb(236, 104, 27); 
+}
+.inst:hover{
+    background:linear-gradient(to right,rgb(67, 3, 109),red,rgb(255, 193, 23));
+}
